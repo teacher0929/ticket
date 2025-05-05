@@ -15,4 +15,9 @@ class StationType extends Model
     {
         return $this->hasMany(Station::class);
     }
+
+    public function transports(): HasMany
+    {
+        return $this->hasMany(Transport::class);
+    }
 }

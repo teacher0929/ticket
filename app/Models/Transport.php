@@ -12,6 +12,11 @@ class Transport extends Model
 
     public $timestamps = false;
 
+    public function stationType(): BelongsTo
+    {
+        return $this->belongsTo(StationType::class);
+    }
+
     public function transportType(): BelongsTo
     {
         return $this->belongsTo(TransportType::class);
