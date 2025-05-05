@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('station_types', function (Blueprint $table) {
             $table->id();
+            $table->string('code')->unique();
             $table->string('name');
         });
     }

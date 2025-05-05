@@ -2,6 +2,9 @@
 
 namespace Database\Seeders;
 
+use App\Models\Location;
+use App\Models\Station;
+use App\Models\StationType;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +15,18 @@ class StationSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        $locations = Location::whereNotNull('parent_id')->get();
+        $stationTypes = StationType::get();
+
+        foreach ($locations as $location) {
+            foreach ($stationTypes as $type) {
+                Station::create([
+                    'location_id' => $location->id,
+                    'station_type_id' => $type->id,
+                    'code' => $location->code . '-' . $type->code,
+                    'name' => $location->name . ' ' . $type->name,
+                ]);
+            }
+        }
     }
 }
