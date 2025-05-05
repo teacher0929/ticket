@@ -15,12 +15,23 @@ class TransportSeeder extends Seeder
     public function run(): void
     {
         $transports = [
-            ['transport_type_id' => 1, 'code' => 'TK-100', 'name' => 'Turkish Airlines'],
-            ['transport_type_id' => 1, 'code' => 'SU-200', 'name' => 'Aeroflot'],
-            ['transport_type_id' => 2, 'code' => 'EXP-301', 'name' => 'Express Train'],
-            ['transport_type_id' => 2, 'code' => 'SIB-402', 'name' => 'Siberian Rail'],
-            ['transport_type_id' => 3, 'code' => 'BUS-101', 'name' => 'City Bus'],
-            ['transport_type_id' => 3, 'code' => 'INTER-202', 'name' => 'Intercity Bus'],
+            // Airlines
+            ['transport_type_id' => 1, 'code' => 'TK-101', 'name' => 'Turkish Airlines'],
+            ['transport_type_id' => 1, 'code' => 'AF-202', 'name' => 'Aeroflot'],
+            ['transport_type_id' => 1, 'code' => 'TM-303', 'name' => 'Turkmenistan Airlines'],
+            ['transport_type_id' => 1, 'code' => 'SU-404', 'name' => 'S7 Airlines'],
+
+            // Trains
+            ['transport_type_id' => 2, 'code' => 'TR-001', 'name' => 'Ashgabat Express'],
+            ['transport_type_id' => 2, 'code' => 'TR-002', 'name' => 'Caspian Rail'],
+            ['transport_type_id' => 2, 'code' => 'TR-003', 'name' => 'Siberian Line'],
+            ['transport_type_id' => 2, 'code' => 'TR-004', 'name' => 'Moscow Railway'],
+
+            // Buses
+            ['transport_type_id' => 3, 'code' => 'BS-11', 'name' => 'Ashgabat City Bus'],
+            ['transport_type_id' => 3, 'code' => 'BS-12', 'name' => 'Turkmen Intercity'],
+            ['transport_type_id' => 3, 'code' => 'BS-13', 'name' => 'Mary Express'],
+            ['transport_type_id' => 3, 'code' => 'BS-14', 'name' => 'Volga Route'],
         ];
 
         foreach ($transports as $transport) {

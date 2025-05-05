@@ -15,8 +15,8 @@ class StationSeeder extends Seeder
      */
     public function run(): void
     {
-        $locations = Location::whereNotNull('parent_id')->get();
-        $stationTypes = StationType::get();
+        $locations = Location::inRandomOrder()->whereNotNull('parent_id')->get();
+        $stationTypes = StationType::inRandomOrder()->get();
 
         foreach ($locations as $location) {
             foreach ($stationTypes as $type) {
