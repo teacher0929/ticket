@@ -15,11 +15,11 @@ class RouteSeeder extends Seeder
      */
     public function run(): void
     {
-        $stations = Station::get();
         $transports = Transport::inRandomOrder()->get();
+        $stations = Station::get();
 
         foreach ($transports as $index => $transport) {
-            $from = $stations->random();
+            $from = $stations->where('station_type_id', $transport->station_type_id)->random();
             do {
                 $to = $stations->where('station_type_id', $from->station_type_id)->random();
             } while ($to->id === $from->id);

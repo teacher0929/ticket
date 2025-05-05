@@ -16,18 +16,26 @@ class TransportSeatSeeder extends Seeder
     public function run(): void
     {
         $transports = Transport::inRandomOrder()->get();
-        $seatClasses = SeatClass::get();
+        $economy = SeatClass::where('code', 'ECO')->first();
+        $business = SeatClass::where('code', 'BUS')->first();
 
         foreach ($transports as $transport) {
-            foreach ($seatClasses as $class) {
-                for ($i = 1; $i <= 5; $i++) {
-                    TransportSeat::create([
-                        'transport_id' => $transport->id,
-                        'seat_class_id' => $class->id,
-                        'seat_number' => strtoupper(substr($class->code, 0, 1)) . $i,
-                        'price' => 50 + ($class->id * 25),
-                    ]);
-                }
+            for ($i = 1; $i <= 5; $i++) {
+                TransportSeat::create([
+                    'transport_id' => $transport->id,
+                    'seat_class_id' => $economy->id,
+                    'seat_number' => strtoupper(substr($economy->code, 0, 1)) . $i,
+                    'price' => 50 + ($economy->id * 25),
+                ]);
+            }
+
+            for ($i = 1; $i <= 5; $i++) {
+                TransportSeat::create([
+                    'transport_id' => $transport->id,
+                    'seat_class_id' => $business->id,
+                    'seat_number' => strtoupper(substr($business->code, 0, 1)) . $i,
+                    'price' => 50 + ($business->id * 25),
+                ]);
             }
         }
     }

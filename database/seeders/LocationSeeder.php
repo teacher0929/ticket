@@ -29,8 +29,6 @@ class LocationSeeder extends Seeder
             // Russia
             ['code' => 'RU-MOW', 'name' => 'Moscow', 'parent_id' => 2],
             ['code' => 'RU-LED', 'name' => 'Saint Petersburg', 'parent_id' => 2],
-            ['code' => 'RU-NVS', 'name' => 'Novosibirsk', 'parent_id' => 2],
-            ['code' => 'RU-EKB', 'name' => 'Yekaterinburg', 'parent_id' => 2],
         ];
 
         foreach ($locations as $location) {

@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('transports', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('station_type_id')->constrained()->cascadeOnDelete();
             $table->foreignId('transport_type_id')->constrained()->cascadeOnDelete();
             $table->string('code')->unique();
             $table->string('name');
