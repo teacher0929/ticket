@@ -25,6 +25,7 @@ class StationSeeder extends Seeder
                     'station_type_id' => $type->id,
                     'code' => $location->code . '-' . $type->code,
                     'name' => $location->name . ' ' . $type->name,
+                    'name_ru' => $location->name_ru . ' ' . $type->name_ru,
                 ]);
             }
         }

@@ -13,10 +13,14 @@ class TransportTypeSeeder extends Seeder
      */
     public function run(): void
     {
-        $types = ['Airline', 'Train', 'Bus'];
+        $types = [
+            ['name' => 'Airline', 'name_ru' => 'Авиакомпания'],
+            ['name' => 'Train', 'name_ru' => 'Поезд'],
+            ['name' => 'Bus', 'name_ru' => 'Автобус'],
+        ];
 
         foreach ($types as $type) {
-            TransportType::create(['name' => $type]);
+            TransportType::create($type);
         }
     }
 }

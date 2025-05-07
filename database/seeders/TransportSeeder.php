@@ -23,7 +23,7 @@ class TransportSeeder extends Seeder
 
             // Trains
             ['station_type_id' => 2, 'transport_type_id' => 2, 'code' => 'TR-001', 'name' => 'Ashgabat Railway'],
-            ['station_type_id' => 2, 'transport_type_id' => 2, 'code' => 'TR-002', 'name' => 'Caspian Rail'],
+            ['station_type_id' => 2, 'transport_type_id' => 2, 'code' => 'TR-002', 'name' => 'Caspian Railway'],
             ['station_type_id' => 2, 'transport_type_id' => 2, 'code' => 'TR-003', 'name' => 'Moscow Railway'],
 
             // Buses

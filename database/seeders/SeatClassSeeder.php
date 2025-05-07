@@ -14,8 +14,8 @@ class SeatClassSeeder extends Seeder
     public function run(): void
     {
         $classes = [
-            ['code' => 'ECO', 'name' => 'Economy'],
-            ['code' => 'BUS', 'name' => 'Business'],
+            ['code' => 'ECO', 'name' => 'Economy', 'name_ru' => 'Эконом'],
+            ['code' => 'BUS', 'name' => 'Business', 'name_ru' => 'Бизнес'],
         ];
 
         foreach ($classes as $class) {

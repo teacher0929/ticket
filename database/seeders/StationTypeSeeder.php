@@ -14,9 +14,9 @@ class StationTypeSeeder extends Seeder
     public function run(): void
     {
         $types = [
-            ['code' => 'AIR', 'name' => 'Airport'],
-            ['code' => 'TRN', 'name' => 'Train Station'],
-            ['code' => 'BUS', 'name' => 'Bus Station']
+            ['code' => 'AIR', 'name' => 'Airport', 'name_ru' => 'Аэропорт'],
+            ['code' => 'TRN', 'name' => 'Train Station', 'name_ru' => 'Железнодорожный вокзал'],
+            ['code' => 'BUS', 'name' => 'Bus Station', 'name_ru' => 'Автовокзал'],
         ];
 
         foreach ($types as $type) {

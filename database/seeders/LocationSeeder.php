@@ -14,21 +14,21 @@ class LocationSeeder extends Seeder
     public function run(): void
     {
         $locations = [
-            ['code' => 'TM', 'name' => 'Turkmenistan', 'parent_id' => null],
-            ['code' => 'RU', 'name' => 'Russia', 'parent_id' => null],
+            ['code' => 'TM', 'name' => 'Turkmenistan', 'name_ru' => 'Туркменистан', 'parent_id' => null],
+            ['code' => 'RU', 'name' => 'Russia', 'name_ru' => 'Россия', 'parent_id' => null],
 
             // Turkmenistan
-            ['code' => 'TM-ASH', 'name' => 'Ashgabat', 'parent_id' => 1],
-            ['code' => 'TM-ARK', 'name' => 'Arkadag', 'parent_id' => 1],
-            ['code' => 'TM-ANE', 'name' => 'Anev', 'parent_id' => 1],
-            ['code' => 'TM-BAL', 'name' => 'Balkanabat', 'parent_id' => 1],
-            ['code' => 'TM-DAS', 'name' => 'Dashoguz', 'parent_id' => 1],
-            ['code' => 'TM-TUR', 'name' => 'Turkmenabat', 'parent_id' => 1],
-            ['code' => 'TM-MRY', 'name' => 'Mary', 'parent_id' => 1],
+            ['code' => 'TM-ASH', 'name' => 'Ashgabat', 'name_ru' => 'Ашхабад', 'parent_id' => 1],
+            ['code' => 'TM-ARK', 'name' => 'Arkadag', 'name_ru' => 'Аркадаг', 'parent_id' => 1],
+            ['code' => 'TM-ANE', 'name' => 'Anev', 'name_ru' => 'Анев', 'parent_id' => 1],
+            ['code' => 'TM-BAL', 'name' => 'Balkanabat', 'name_ru' => 'Балканабад', 'parent_id' => 1],
+            ['code' => 'TM-DAS', 'name' => 'Dashoguz', 'name_ru' => 'Дашогуз', 'parent_id' => 1],
+            ['code' => 'TM-TUR', 'name' => 'Turkmenabat', 'name_ru' => 'Туркменабад', 'parent_id' => 1],
+            ['code' => 'TM-MRY', 'name' => 'Mary', 'name_ru' => 'Мары', 'parent_id' => 1],
 
             // Russia
-            ['code' => 'RU-MOW', 'name' => 'Moscow', 'parent_id' => 2],
-            ['code' => 'RU-LED', 'name' => 'Saint Petersburg', 'parent_id' => 2],
+            ['code' => 'RU-MOW', 'name' => 'Moscow', 'name_ru' => 'Москва', 'parent_id' => 2],
+            ['code' => 'RU-LED', 'name' => 'Saint Petersburg', 'name_ru' => 'Санкт-Петербург', 'parent_id' => 2],
         ];
 
         foreach ($locations as $location) {

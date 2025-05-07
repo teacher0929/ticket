@@ -16,7 +16,6 @@ return new class extends Migration {
             $table->foreignId('transport_type_id')->constrained()->cascadeOnDelete();
             $table->string('code')->unique();
             $table->string('name');
-            $table->string('name_ru')->nullable();
         });
     }
 
