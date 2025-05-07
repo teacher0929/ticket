@@ -10,4 +10,11 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
+
+    public function locale($locale)
+    {
+        session()->put('locale', $locale == 'ru' ? 'ru' : 'en');
+
+        return redirect()->back();
+    }
 }
