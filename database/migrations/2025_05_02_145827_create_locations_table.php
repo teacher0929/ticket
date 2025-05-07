@@ -15,6 +15,7 @@ return new class extends Migration {
             $table->foreignId('parent_id')->nullable()->constrained('locations', 'id')->nullOnDelete();
             $table->string('code')->unique();
             $table->string('name');
+            $table->string('name_ru')->nullable();
         });
     }
 

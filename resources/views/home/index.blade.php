@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title')
-    Home
+    @lang('app.home')
 @endsection
 @section('content')
-    <div class="display-1">Home</div>
+    <div class="display-1">@lang('app.home')</div>
 @endsection

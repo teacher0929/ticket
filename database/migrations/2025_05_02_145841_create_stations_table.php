@@ -16,6 +16,7 @@ return new class extends Migration {
             $table->foreignId('station_type_id')->constrained()->cascadeOnDelete();
             $table->string('code')->unique();
             $table->string('name');
+            $table->string('name_ru')->nullable();
         });
     }
 

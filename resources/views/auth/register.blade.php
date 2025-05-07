@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('title')
-    Register
+    @lang('app.register')
 @endsection
 @section('content')
     <div class="display-1">
-        Register
+        @lang('app.register')
     </div>
 @endsection
