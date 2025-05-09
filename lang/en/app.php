@@ -54,4 +54,13 @@ return [
     'createdAt' => 'Created At',
     'updatedAt' => 'Updated At',
     'nameRu' => 'Name (Russian)',
+
+    'edit' => 'Edit',
+    'update' => 'Update',
+    'passwordHint' => 'New password (leave blank to keep current)',
+
+    'loginSuccess' => 'You have successfully logged in.',
+    'logoutSuccess' => 'You have successfully logged out.',
+    'registerSuccess' => 'Your account has been created successfully.',
+    'profileUpdateSuccess' => 'Your profile has been updated successfully.',
 ];

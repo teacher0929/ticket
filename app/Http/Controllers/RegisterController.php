@@ -23,10 +23,18 @@ class RegisterController extends Controller
             'password' => ['required', 'string', 'between:8,50'],
         ]);
 
-        $user = User::create($request->all());
+        $user = new User();
+        $user->name = $request->name;
+        $user->surname = $request->surname;
+        $user->username = $request->username;
+        $user->password = bcrypt($request->password);
+        $user->save();
 
         Auth::login($user);
 
-        return redirect()->route('home');
+        return redirect()->route('home')
+            ->with([
+                'success' => trans('app.registerSuccess'),
+            ]);
     }
 }

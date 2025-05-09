@@ -8,10 +8,14 @@
         <div class="collapse navbar-collapse" id="navbars">
             <ul class="navbar-nav ms-auto">
                 @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="event.preventDefault(); document.getElementById('logout').submit();">
-                            {{ auth()->user()->getName() }} @lang('app.logout')
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                            {{ auth()->user()->getName() }}
                         </a>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a href="{{ route('profile.edit') }}" class="dropdown-item">@lang('app.edit')</a></li>
+                            <li><a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('logout').submit();">@lang('app.logout')</a></li>
+                        </ul>
                         <form method="POST" action="{{ route('logout') }}" id="logout">
                             @csrf
                         </form>
@@ -31,8 +35,8 @@
                     <ul class="dropdown-menu dropdown-menu-end">
                         <li><a href="{{ route('locale', 'en') }}" class="dropdown-item {{ app()->getLocale() == 'en' ? 'fw-bold' : '' }}">English</a></li>
                         <li><a href="{{ route('locale', 'ru') }}" class="dropdown-item {{ app()->getLocale() == 'ru' ? 'fw-bold' : '' }}">Русский</a></li>
-                    </ul>
-                </li>
+                        </ul>
+                    </li>
             </ul>
         </div>
     </div>

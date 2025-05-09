@@ -22,7 +22,10 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->route('home');
+            return redirect()->route('home')
+                ->with([
+                    'success' => trans('app.loginSuccess'),
+                ]);
         }
 
         return back()
@@ -40,6 +43,9 @@ class LoginController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/')
+            ->with([
+                'success' => trans('app.logoutSuccess'),
+            ]);
     }
 }
