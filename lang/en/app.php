@@ -1,7 +1,7 @@
 <?php
 
 return [
-    'appName' => 'Starbucks',
+    'appName' => 'Ticket',
 
     'login' => 'Login',
     'register' => 'Register',
@@ -10,6 +10,7 @@ return [
     'password' => 'Password',
 
     'home' => 'Home',
+    'language' => 'Language',
     'search' => 'Search',
     'profile' => 'Profile',
 
@@ -48,6 +49,7 @@ return [
     'status' => 'Status',
     'price' => 'Price',
     'name' => 'Name',
+    'surname' => 'Surname',
     'seatNumber' => 'Seat Number',
     'createdAt' => 'Created At',
     'updatedAt' => 'Updated At',

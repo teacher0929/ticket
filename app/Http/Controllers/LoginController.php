@@ -15,14 +15,14 @@ class LoginController extends Controller
     public function store(Request $request)
     {
         $credentials = $request->validate([
-            'username' => ['required', 'string'],
-            'password' => ['required'],
+            'username' => ['required', 'string', 'alpha_num', 'max:50'],
+            'password' => ['required', 'string', 'between:8,50'],
         ]);
 
         if (Auth::attempt($credentials)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('home');
+            return redirect()->route('home');
         }
 
         return back()

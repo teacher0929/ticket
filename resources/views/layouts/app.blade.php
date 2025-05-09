@@ -12,6 +12,7 @@
 <body class="bg-light">
 @include('app.nav')
 <div class="container-xl py-3">
+    @include('app.alert')
     @yield('content')
 </div>
 </body>

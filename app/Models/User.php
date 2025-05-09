@@ -11,7 +11,7 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
-    protected $fillable = ['name', 'username', 'password'];
+    protected $fillable = ['name', 'surname', 'username', 'password'];
 
     protected $hidden = ['password', 'remember_token'];
 
@@ -27,5 +27,10 @@ class User extends Authenticatable
     public function bookings(): HasMany
     {
         return $this->hasMany(Booking::class);
+    }
+
+    public function getName()
+    {
+        return $this->name . ' ' . $this->surname;
     }
 }

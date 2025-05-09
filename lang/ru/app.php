@@ -1,17 +1,18 @@
 <?php
 
 return [
-    'appName' => 'Starbucks',
+    'appName' => null,
 
-    'login' => 'Login',
-    'register' => 'Register',
-    'logout' => 'Logout',
-    'username' => 'Username',
-    'password' => 'Password',
+    'login' => 'Войти',
+    'register' => 'Регистрация',
+    'logout' => 'Выйти',
+    'username' => 'Имя пользователя',
+    'password' => 'Пароль',
 
-    'home' => 'Home',
-    'search' => 'Search',
-    'profile' => 'Profile',
+    'home' => 'Главная',
+    'language' => 'Язык',
+    'search' => 'Поиск',
+    'profile' => 'Профиль',
 
     'location' => 'Местоположение',
     'locations' => 'Местоположения',
@@ -47,7 +48,8 @@ return [
     'arrivalTime' => 'Время прибытия',
     'status' => 'Статус',
     'price' => 'Цена',
-    'name' => 'Название',
+    'name' => 'Имя',
+    'surname' => 'Фамилия',
     'seatNumber' => 'Номер места',
     'createdAt' => 'Создано',
     'updatedAt' => 'Обновлено',

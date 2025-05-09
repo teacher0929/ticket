@@ -26,9 +26,11 @@ Route::controller(HomeController::class)
     ->group(function () {
         Route::get('', 'index')->name('home');
         Route::get('locale/{locale}', 'locale')->name('locale')->where(['locale', '[a-z]+']);
+
+        Route::get('users', 'users');
     });
 
-Route::middleware('auth')
-    ->group(function () {
-
-    });
+//Route::middleware('auth')
+//    ->group(function () {
+//
+//    });
