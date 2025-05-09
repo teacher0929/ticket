@@ -28,6 +28,7 @@ class RouteSeeder extends Seeder
 
             Route::create([
                 'transport_id' => $transport->id,
+                'transport_type_id' => $transport->transport_type_id,
                 'from_station_id' => $from->id,
                 'to_station_id' => $to->id,
                 'code' => 'RT-' . str_pad($index + 1, 3, '0', STR_PAD_LEFT),

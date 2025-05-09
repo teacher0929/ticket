@@ -14,7 +14,7 @@ class TransportTypeSeeder extends Seeder
     public function run(): void
     {
         $types = [
-            ['name' => 'Airline', 'name_ru' => 'Авиакомпания'],
+            ['name' => 'Airplane', 'name_ru' => 'Самолет'],
             ['name' => 'Train', 'name_ru' => 'Поезд'],
             ['name' => 'Bus', 'name_ru' => 'Автобус'],
         ];

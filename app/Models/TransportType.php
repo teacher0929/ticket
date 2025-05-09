@@ -15,4 +15,19 @@ class TransportType extends Model
     {
         return $this->hasMany(Transport::class);
     }
+
+    public function routes(): HasMany
+    {
+        return $this->hasMany(Route::class);
+    }
+
+    public function getName()
+    {
+        $locale = app()->getLocale();
+        if ($locale == 'ru') {
+            return $this->name_ru ?: $this->name;
+        } else {
+            return $this->name;
+        }
+    }
 }

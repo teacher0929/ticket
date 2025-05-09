@@ -25,6 +25,11 @@ class Route extends Model
         return $this->belongsTo(Transport::class);
     }
 
+    public function transportType(): BelongsTo
+    {
+        return $this->belongsTo(TransportType::class);
+    }
+
     public function fromStation(): BelongsTo
     {
         return $this->belongsTo(Station::class, 'from_station_id');
