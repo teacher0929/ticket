@@ -21,9 +21,9 @@ class HomeController extends Controller
 
         $routes = Route::where('transport_type_id', $f_transportType)
             ->orderBy('departure_time')
+            ->take(10)
             ->with('transport', 'fromStation', 'toStation')
-            ->paginate()
-            ->withQueryString();
+            ->get();
 
         return view('home.index')
             ->with([

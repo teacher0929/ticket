@@ -35,7 +35,8 @@ Route::controller(RouteController::class)
     ->prefix('routes')
     ->name('routes.')
     ->group(function () {
-        Route::get('{code}', 'show')->name('show');
+        Route::get('', 'index')->name('index');
+        Route::get('{code}', 'show')->name('show')->where(['code' => '[A-Z0-9-]+']);
     });
 
 Route::middleware('auth')
