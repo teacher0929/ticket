@@ -26,4 +26,9 @@ class Transport extends Model
     {
         return $this->hasMany(Route::class);
     }
+
+    public function getName()
+    {
+        return $this->name;
+    }
 }

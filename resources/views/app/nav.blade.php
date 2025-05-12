@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Navbar">
+<nav class="navbar navbar-expand-lg navbar-dark bg-success" aria-label="Navbar">
     <div class="container-xl">
         <a class="navbar-brand" href="{{ route('home') }}">@lang('app.appName')</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">

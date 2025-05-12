@@ -20,4 +20,14 @@ class StationType extends Model
     {
         return $this->hasMany(Transport::class);
     }
+
+    public function getName()
+    {
+        $locale = app()->getLocale();
+        if ($locale == 'ru') {
+            return $this->name_ru ?: $this->name;
+        } else {
+            return $this->name;
+        }
+    }
 }

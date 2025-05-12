@@ -31,4 +31,14 @@ class Station extends Model
     {
         return $this->hasMany(Station::class, 'to_station_id');
     }
+
+    public function getName()
+    {
+        $locale = app()->getLocale();
+        if ($locale == 'ru') {
+            return $this->name_ru ?: $this->name;
+        } else {
+            return $this->name;
+        }
+    }
 }

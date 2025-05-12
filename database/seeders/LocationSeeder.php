@@ -19,12 +19,6 @@ class LocationSeeder extends Seeder
 
             // Turkmenistan
             ['code' => 'TM-ASH', 'name' => 'Ashgabat', 'name_ru' => 'Ашхабад', 'parent_id' => 1],
-            ['code' => 'TM-ARK', 'name' => 'Arkadag', 'name_ru' => 'Аркадаг', 'parent_id' => 1],
-            ['code' => 'TM-ANE', 'name' => 'Anev', 'name_ru' => 'Анев', 'parent_id' => 1],
-            ['code' => 'TM-BAL', 'name' => 'Balkanabat', 'name_ru' => 'Балканабад', 'parent_id' => 1],
-            ['code' => 'TM-DAS', 'name' => 'Dashoguz', 'name_ru' => 'Дашогуз', 'parent_id' => 1],
-            ['code' => 'TM-TUR', 'name' => 'Turkmenabat', 'name_ru' => 'Туркменабад', 'parent_id' => 1],
-            ['code' => 'TM-MRY', 'name' => 'Mary', 'name_ru' => 'Мары', 'parent_id' => 1],
 
             // Russia
             ['code' => 'RU-MOW', 'name' => 'Moscow', 'name_ru' => 'Москва', 'parent_id' => 2],

@@ -44,4 +44,13 @@ class Route extends Model
     {
         return $this->hasMany(Booking::class);
     }
+
+    public function getStatus()
+    {
+        return [
+            trans('app.onTime'),
+            trans('app.departure'),
+            trans('app.arrival'),
+        ][$this->status];
+    }
 }

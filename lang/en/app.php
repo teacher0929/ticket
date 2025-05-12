@@ -63,4 +63,8 @@ return [
     'logoutSuccess' => 'You have successfully logged out.',
     'registerSuccess' => 'Your account has been created successfully.',
     'profileUpdateSuccess' => 'Your profile has been updated successfully.',
+
+    'onTime' => 'On time',
+    'departure' => 'Departure',
+    'arrival' => 'Arrival',
 ];
