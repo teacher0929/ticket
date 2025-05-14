@@ -67,4 +67,9 @@ return [
     'onTime' => 'On time',
     'departure' => 'Departure',
     'arrival' => 'Arrival',
+
+    'fromStation' => 'From station',
+    'toStation' => 'To station',
+    'filter' => 'Filter',
+    'clear' => 'Clear',
 ];
