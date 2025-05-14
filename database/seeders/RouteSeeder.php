@@ -28,8 +28,9 @@ class RouteSeeder extends Seeder
                 $addDays = rand(1, 10);
 
                 $route = Route::create([
-                    'transport_id' => $transport->id,
                     'transport_type_id' => $transport->transport_type_id,
+                    'transport_id' => $transport->id,
+                    'station_type_id' => $transport->station_type_id,
                     'from_station_id' => $from->id,
                     'to_station_id' => $to->id,
                     'code' => str()->random(5),

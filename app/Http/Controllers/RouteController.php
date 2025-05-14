@@ -42,7 +42,10 @@ class RouteController extends Controller
             ->orderBy('name')
             ->get();
 
-        $stations = Station::orderBy('name')
+        $transportType = TransportType::findOrFail($f_transportType);
+
+        $stations = Station::where('station_type_id', $transportType->station_type_id)
+            ->orderBy('name')
             ->get();
 
         return view('route.index')

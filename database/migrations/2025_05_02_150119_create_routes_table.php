@@ -12,8 +12,9 @@ return new class extends Migration {
     {
         Schema::create('routes', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('transport_id')->constrained()->cascadeOnDelete();
             $table->foreignId('transport_type_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('transport_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('station_type_id')->constrained()->cascadeOnDelete();
             $table->foreignId('from_station_id')->constrained('stations', 'id')->cascadeOnDelete();
             $table->foreignId('to_station_id')->constrained('stations', 'id')->cascadeOnDelete();
             $table->string('code')->unique();

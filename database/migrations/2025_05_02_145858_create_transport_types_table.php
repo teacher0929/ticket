@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('transport_types', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('station_type_id')->constrained()->cascadeOnDelete();
             $table->string('name');
             $table->string('name_ru')->nullable();
         });

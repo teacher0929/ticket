@@ -14,9 +14,9 @@ class TransportTypeSeeder extends Seeder
     public function run(): void
     {
         $types = [
-            ['name' => 'Airplane', 'name_ru' => 'Самолет'],
-            ['name' => 'Train', 'name_ru' => 'Поезд'],
-            ['name' => 'Bus', 'name_ru' => 'Автобус'],
+            ['station_type_id' => 1, 'name' => 'Airplane', 'name_ru' => 'Самолет'],
+            ['station_type_id' => 2, 'name' => 'Train', 'name_ru' => 'Поезд'],
+            ['station_type_id' => 3, 'name' => 'Bus', 'name_ru' => 'Автобус'],
         ];
 
         foreach ($types as $type) {
