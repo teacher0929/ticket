@@ -9,7 +9,8 @@
             <ul class="navbar-nav me-auto">
                 @foreach($transportTypes as $transportType)
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('routes.index', ['transportType' => $transportType->id]) }}">
+                        <a class="nav-link {{ (request()->routeIs('routes.index') and request()->has('transportType') and request()->transportType == $transportType->id) ? 'link-warning' : '' }}"
+                           href="{{ route('routes.index', ['transportType' => $transportType->id]) }}">
                             {{ $transportType->getName() }}
                         </a>
                     </li>
